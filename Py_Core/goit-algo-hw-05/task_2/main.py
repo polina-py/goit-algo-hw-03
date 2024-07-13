@@ -2,7 +2,8 @@ import re
 from typing import Generator, Callable
 
 def generator_numbers(text: str) -> Generator[float, None, None]:
-    numbers = re.findall("\-?\d+", text)
+    pattern = r"\-?\d+(?:\.\d*)?"
+    numbers = re.findall(pattern, text)
     for num in numbers:
         yield float(num)
 
