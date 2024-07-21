@@ -1,4 +1,4 @@
-from potential_error import input_error
+from task_4.potential_error import input_error
 
 @input_error
 def add_contact(args, contacts) -> str:
